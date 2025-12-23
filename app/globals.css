@@ -1,0 +1,63 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary: #FF6B35;
+  --primary-dark: #E55A2B;
+  --chestnut: #8B4513;
+  --cream: #FFF8E7;
+}
+
+body {
+  font-family: 'Hiragino Kaku Gothic ProN', 'Noto Sans JP', sans-serif;
+  background: linear-gradient(180deg, #FFF8E7 0%, #F5E6D3 100%);
+  min-height: 100vh;
+}
+
+@layer utilities {
+  .text-shadow {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .card-shadow {
+    box-shadow: 0 10px 40px rgba(139, 69, 19, 0.15);
+  }
+}
+
+/* カスタムスクロールバー */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F5E6D3;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #8B4513;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #A0522D;
+}
+
+/* プログレスバーアニメーション */
+.progress-bar {
+  transition: width 0.5s ease-out;
+}
+
+/* ボタンホバーエフェクト */
+.btn-hover {
+  transition: all 0.3s ease;
+}
+
+.btn-hover:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 107, 53, 0.4);
+}
+
+.btn-hover:active {
+  transform: translateY(0);
+}
